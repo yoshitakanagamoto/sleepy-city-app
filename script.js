@@ -36,7 +36,7 @@ function displayResults(results) {
                 <h3>${place.name}</h3>
                 <p>住所: ${place.address}</p>
                 <p>営業時間: ${place.hours}</p>
-                <p>設備: ${place.amenities.join(", ")}</p>
+                <p>${place.description}</p>
                 <p>評価: ${place.rating} ⭐</p>
                 <a href="${place.link}" target="_blank" class="site-link">公式サイトを見る</a>
             `;

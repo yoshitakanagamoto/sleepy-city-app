@@ -1,20 +1,74 @@
 [
     {
-        "name": "24hカフェ 渋谷",
-        "address": "東京都渋谷区...",
+        "name": "東京豊洲 万葉倶楽部",
+        "address": "東京都江東区豊洲6丁目5番1号",
         "location": "東京都",
         "hours": "24時間営業",
-        "amenities": ["Wi-Fi", "電源", "駐車場"],
-        "rating": 4.5,
-        "link": "https://example.com/shibuya-cafe"
+        "description": "東京湾を一望できる展望足湯庭園が魅力の24時間営業の温浴施設です。",
+        "rating": 3.9,
+        "link": "https://tokyo-toyosu.manyo.co.jp/"
     },
     {
-        "name": "深夜図書館 大阪",
-        "address": "大阪府大阪市...",
-        "location": "大阪府",
+        "name": "テルマー湯 新宿店",
+        "address": "東京都新宿区歌舞伎町１丁目１−２ テルマー湯内 B1F",
+        "location": "東京都",
         "hours": "24時間営業",
-        "amenities": ["静か", "電源", "Wi-Fi"],
-        "rating": 4.2,
-        "link": "https://example.com/osaka-library"
+        "description": "新宿に位置する天然温泉で、24時間営業しており、都会のオアシスとして人気です。",
+        "rating": 4.1,
+        "link": "https://thermae-yu.jp/"
+    },
+    {
+        "name": "天然温泉 平和島",
+        "address": "東京都大田区平和島1-1-1 ビックファン平和島2F",
+        "location": "東京都",
+        "hours": "24時間営業",
+        "description": "年中無休・24時間営業の天然温泉で、サウナや多彩な浴槽が楽しめます。",
+        "rating": 3.8,
+        "link": "https://www.heiwajima-onsen.jp/"
+    },
+    {
+        "name": "銀座 SPA&SAUNA コリドーの湯",
+        "address": "東京都中央区銀座７丁目２−１８ グランベルスクエア 4F",
+        "location": "東京都",
+        "hours": "11:00 ~ 9:00",
+        "description": "銀座駅・新橋駅から徒歩5分の立地にあるスパ&サウナで、深夜まで営業しています。",
+        "rating": 3.8,
+        "link": "https://corridorno-yu.jp/"
+    },
+    {
+        "name": "泉天空の湯 有明ガーデン",
+        "address": "東京都江東区有明２丁目１−８",
+        "location": "東京都",
+        "hours": "24時間営業",
+        "description": "有明ガーデン内にある温浴施設で、24時間営業しており、多彩なリラクゼーションを提供しています。",
+        "rating": 3.8,
+        "link": "https://www.shopping-sumitomo-rd.com/ariake/spa-izumi/userguide.html"
+    },
+    {
+        "name": "浅草ROXまつり湯",
+        "address": "東京都江東区有明２丁目１−８",
+        "location": "東京都",
+        "hours": "10:30 ~ 9:00(日 10:30 ~ 23:00)",
+        "description": "浅草にある総合温浴施設で、月～土は深夜まで営業しています。",
+        "rating": 3.8,
+        "link": "https://www.matsuri-yu.com/"
+    },
+    {
+        "name": "スパ ラクーア",
+        "address": "東京都文京区春日１丁目１−１",
+        "location": "東京都",
+        "hours": "11:00 ~ 9:00",
+        "description": "東京ドームシティ内にあるスパ施設で、深夜1時以降の利用には追加料金が発生します。",
+        "rating": 3.8,
+        "link": "https://www.laqua.jp/spa/information/"
+    },
+    {
+        "name": "スカイスパYOKOHAMA",
+        "address": "神奈川県横浜市西区高島2-19-12 スカイビル14F",
+        "location": "神奈川県",
+        "hours": "24時間営業",
+        "description": "横浜駅直結のスパ・サウナ・コワーキングスペースで、深夜から早朝の利用も可能です。",
+        "rating": 4.1,
+        "link": "https://www.skyspa.co.jp/"
     }
 ]
