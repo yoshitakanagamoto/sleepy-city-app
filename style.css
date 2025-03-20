@@ -1,5 +1,6 @@
+/* フォントと背景 */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     background-color: #121212;
     color: #fff;
     margin: 0;
@@ -13,6 +14,7 @@ header {
     font-size: 1.5em;
 }
 
+/* 検索エリア */
 .search-area {
     margin: 20px;
 }
@@ -34,6 +36,7 @@ button:hover {
     background-color: #005757;
 }
 
+/* 結果表示 */
 #results {
     display: flex;
     flex-wrap: wrap;
@@ -60,4 +63,16 @@ button:hover {
 .result-card img {
     width: 100%;
     border-radius: 5px;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 600px) {
+    .search-area input, .search-area select, .search-area button {
+        width: 100%;
+        font-size: 1.2em;
+    }
+
+    .result-card {
+        width: 90%;
+    }
 }

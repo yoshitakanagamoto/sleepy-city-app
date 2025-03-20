@@ -15,7 +15,7 @@ async function search() {
 
     const results = places.filter(place =>
         (place.name.toLowerCase().includes(query) || 
-         place.amenities.some(am => am.toLowerCase().includes(query))) &&
+         place.description.toLowerCase().includes(query)) &&
         (location === "" || place.location === location)
     );
 
