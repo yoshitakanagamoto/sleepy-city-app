@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>眠れる街</title>
+    <title>眠れる街 - 深夜営業施設検索</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>眠れる街</h1>
-        <p>夜間営業の施設を検索しよう</p>
+        <h1>眠れる街 🌙</h1>
+        <p>深夜でも安心して過ごせる場所を探そう</p>
     </header>
 
-    <section>
-        <input type="text" id="search-input" placeholder="施設名を検索">
-        <button onclick="search()">検索</button>
+    <section class="search-area">
+        <input type="text" id="search-name" placeholder="施設名・設備を入力">
+        <select id="search-location">
+            <option value="">地域を選択</option>
+            <option value="東京都">東京都</option>
+            <option value="大阪府">大阪府</option>
+            <option value="福岡県">福岡県</option>
+        </select>
+        <button onclick="search()">🔍 検索</button>
     </section>
 
     <section id="results"></section>
@@ -22,3 +28,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+

@@ -1,0 +1,20 @@
+[
+    {
+        "name": "24hカフェ 渋谷",
+        "address": "東京都渋谷区...",
+        "location": "東京都",
+        "hours": "24時間営業",
+        "amenities": ["Wi-Fi", "電源", "駐車場"],
+        "rating": 4.5,
+        "image": "assets/images/cafe.jpg"
+    },
+    {
+        "name": "深夜図書館 大阪",
+        "address": "大阪府大阪市...",
+        "location": "大阪府",
+        "hours": "24時間営業",
+        "amenities": ["静か", "電源", "Wi-Fi"],
+        "rating": 4.2,
+        "image": "assets/images/library.jpg"
+    }
+]

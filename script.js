@@ -1,43 +1,46 @@
-const places = [
-    {
-        name: "24hカフェ",
-        address: "東京都千代田区...",
-        hours: "24時間営業",
-        amenities: ["Wi-Fi", "電源"],
-        rating: 4.5
-    },
-    {
-        name: "深夜図書館",
-        address: "東京都渋谷区...",
-        hours: "24時間営業",
-        amenities: ["静か", "電源"],
-        rating: 4.2
+async function fetchData() {
+    try {
+        const response = await fetch('data.json');
+        const places = await response.json();
+        return places;
+    } catch (error) {
+        console.error("データを読み込めませんでした:", error);
     }
-];
+}
 
-function search() {
-    const searchQuery = document.getElementById('search-input').value.toLowerCase();
-    const results = places.filter(place => place.name.toLowerCase().includes(searchQuery));
+async function search() {
+    const query = document.getElementById('search-name').value.toLowerCase();
+    const location = document.getElementById('search-location').value;
+    const places = await fetchData();
+
+    const results = places.filter(place =>
+        (place.name.toLowerCase().includes(query) || 
+         place.amenities.some(am => am.toLowerCase().includes(query))) &&
+        (location === "" || place.location === location)
+    );
+
     displayResults(results);
 }
 
 function displayResults(results) {
-    const resultsContainer = document.getElementById('results');
-    resultsContainer.innerHTML = '';  // Clear previous results
+    const container = document.getElementById('results');
+    container.innerHTML = ''; 
 
     if (results.length === 0) {
-        resultsContainer.innerHTML = '<p>該当する施設はありません。</p>';
+        container.innerHTML = '<p>該当する施設はありません。</p>';
     } else {
         results.forEach(place => {
-            const placeElement = document.createElement('div');
-            placeElement.innerHTML = `
+            const card = document.createElement('div');
+            card.className = 'result-card';
+            card.innerHTML = `
+                <img src="${place.image}" alt="${place.name}">
                 <h3>${place.name}</h3>
                 <p>住所: ${place.address}</p>
                 <p>営業時間: ${place.hours}</p>
                 <p>設備: ${place.amenities.join(", ")}</p>
-                <p>評価: ${place.rating}</p>
+                <p>評価: ${place.rating} ⭐</p>
             `;
-            resultsContainer.appendChild(placeElement);
+            container.appendChild(card);
         });
     }
 }
