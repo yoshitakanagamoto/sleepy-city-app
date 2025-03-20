@@ -1,6 +1,6 @@
-/* フォントと背景 */
+/* 全体のスタイル */
 body {
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #121212;
     color: #fff;
     margin: 0;
@@ -14,15 +14,19 @@ header {
     font-size: 1.5em;
 }
 
-/* 検索エリア */
 .search-area {
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 input, select, button {
     padding: 10px;
     font-size: 1em;
     margin: 5px;
+    width: 100%;  /* スマホでもパソコンでも入力フォームが広がるように */
+    max-width: 400px; /* 最大幅を400pxに制限 */
 }
 
 button {
@@ -36,7 +40,7 @@ button:hover {
     background-color: #005757;
 }
 
-/* 結果表示 */
+/* 検索結果のスタイル */
 #results {
     display: flex;
     flex-wrap: wrap;
@@ -48,8 +52,8 @@ button:hover {
     background-color: #1c1c1c;
     padding: 15px;
     margin: 10px;
-    width: 80%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 400px; /* 最大幅を400pxに制限 */
     border-radius: 10px;
     text-align: left;
     box-shadow: 2px 2px 10px rgba(0, 255, 255, 0.2);
@@ -65,14 +69,40 @@ button:hover {
     border-radius: 5px;
 }
 
-/* レスポンシブデザイン */
-@media (max-width: 600px) {
-    .search-area input, .search-area select, .search-area button {
-        width: 100%;
-        font-size: 1.2em;
+/* レスポンシブ対応 */
+@media screen and (min-width: 768px) {
+    /* 画面幅が768px以上の場合（タブレットやPC） */
+    .search-area {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    input, select, button {
+        width: auto;  /* 幅を自動調整 */
+        margin: 5px 10px;
+    }
+
+    #results {
+        justify-content: flex-start;  /* 結果を左寄せ */
     }
 
     .result-card {
-        width: 90%;
+        width: 45%; /* 複数列に並べるため、カードの幅を45%に設定 */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* 画面幅が767px以下の場合（スマホ） */
+    .search-area {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input, select, button {
+        width: 90%; /* 入力フォームの幅を90%に設定 */
+    }
+
+    .result-card {
+        width: 90%; /* 施設カードの幅を90%に設定 */
     }
 }
