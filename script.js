@@ -33,7 +33,6 @@ function displayResults(results) {
             const card = document.createElement('div');
             card.className = 'result-card';
             card.innerHTML = `
-                <img src="${place.image}" alt="${place.name}">
                 <h3>${place.name}</h3>
                 <p>住所: ${place.address}</p>
                 <p>営業時間: ${place.hours}</p>

@@ -6,7 +6,6 @@
         "hours": "24時間営業",
         "amenities": ["Wi-Fi", "電源", "駐車場"],
         "rating": 4.5,
-        "image": "assets/images/cafe.jpg",
         "link": "https://example.com/shibuya-cafe"
     },
     {
@@ -16,7 +15,6 @@
         "hours": "24時間営業",
         "amenities": ["静か", "電源", "Wi-Fi"],
         "rating": 4.2,
-        "image": "assets/images/library.jpg",
         "link": "https://example.com/osaka-library"
     }
 ]
